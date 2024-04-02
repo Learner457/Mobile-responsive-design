@@ -1,0 +1,335 @@
+/* implementing css for responsive design  */
+body {
+    margin: 0;
+    padding: 0;
+    /* so that no spaces around webpage */
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    /* line-height distance between lines we get */
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Inter";
+    font-weight: 500;
+    color: #222222;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* standard font-sizes of child elements of body tag to use for good redability. 2.5 rem=2.5x body size */
+h1 {
+    font-size: 2.5 rem;
+      margin: 0 auto;}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;}
+h3 { font-size: 1.4 rem;}
+h4 { font-size: 1.38rem;}
+h5 { font-size: 1.25rem;}
+h6 {font-size: 1rem;}
+
+a {
+    text-decoration: none;
+    /* removes underline to anchor tags */
+    color: #3B82F6;
+}
+
+a:hover {
+    color: #1E40AF; /*when u place cursor on link we get this color */
+}
+
+#logo_with_text {
+    display: none; /* navbar image (containing both image and text jovian )doesn't show on screen */
+}
+#navbar {
+    padding: 6px;
+    margin: 0;
+}
+#photos {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+#work {
+    border: 1px solid;
+    /* it creates border */
+    border-radius: 3px;
+    width: 100%;
+    border-style: dashed;
+    border-color: rgb(20, 20, 20);
+    border-width: 2px;
+}
+#jobs{
+    display: none;
+}
+#jobs-list{
+    margin: 4px auto;
+    max-width: 400px;
+}
+.joby{
+    border: 5px solid #dddddd;
+    margin-top: 8px;
+    border-radius: 5px;
+    padding: 8px;
+    margin-right: 4px;
+    
+}
+.job-title{
+    font-size: 1.25rem ;
+    font-weight: 500;
+    color: #222222;
+}
+.job-detail{
+    margin-top: 2px;
+    color: #555555;
+
+}
+#Application{
+
+    Max-width:800px;
+     padding:0 10px; /* paading 10px so that when screen size decreases, name label is not touching left side screen */
+    margin: 0 auto;
+}
+#Application-form label{
+     font-weight: 600; /*makes text darker */
+}
+#Application-form input,select,textarea{
+    padding: 4px;
+    font-size: 1.15rem;
+    border-radius: 5px;
+    /* border: 1px solid gray; */
+}
+ #Application-form div{   /*or we can give some id or class to div or use that name instead */
+    margin : 20px; 
+}
+.text textarea{
+    Width:80%;
+    font-family: 'Roboto',sans-serif;
+}
+#check input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+}
+#submitting{
+    text-align: center;
+}
+
+input[type="submit"]{
+    background-color: blue;
+    color: white;
+    font-weight: 500;
+} 
+#fotter {
+    background-color: ghostwhite;
+    padding: 12px;
+    margin-top: 32px;
+    text-align: center;
+    background-color:#CBD5E1;
+}
+#fotter-links{
+    list-style :none; /*bullet points will vanish*/
+    /* display: flex; */
+    
+}
+#fotter-links li {
+    margin: 8px 16px;
+    padding-left: 0;
+      
+}
+.copyright{
+    color:grey;
+    font-size: 0.95rem;
+    padding-left: 0;
+}
+#paragraph {
+    font-size: 0.92rem;
+    margin: 4px;
+}
+
+/*Mobile first responsive design means we first prepare mobile compatible application first then make changes in such a way
+it looks great for all screen sizes like laptop, desktops etc>> */
+
+
+/* Small devices (tablets) */
+@media screen and (min-width:481px) and (max-width: 768px) {
+    html {
+        font-size: 24px;
+    }
+
+    #logo_with_text {
+        display: block;
+    }
+    #for_tablet{
+        display: flex;
+        width: 100%;
+    }
+
+    #nav_small {
+        display: none;
+    }
+    .joby{
+        width: 50%;
+        padding: 2px;
+    }
+    #jobs-list{
+        max-width: 600px;
+        margin: 0 auto;
+        padding:8px;
+    }
+    h2 {
+        margin: 0 auto;
+    }
+
+    #photos {
+        height: 340px;
+    }
+
+    #paragraph {
+        font-size: 0.62rem;
+        padding: 12px;
+        width: 50%;
+        margin-right: 20px;
+        /* text-align: justify; ensures at end no spaces in lines of paragraphs */
+    }
+
+    #important {
+        display: flex;
+        max-width: 800px;
+        /* while moving screen,above 800px the content remain as it is.
+         it is not going to adjust according to screen.*/
+        margin: 0 auto;
+        /* if we want to see two div's side by side. put two div's inside another new div
+         and apply css flex property */
+        padding: 8px;
+        /* so that it doesn't touch edge of screen when shorter.*/
+    }
+
+    #Team_image {
+        Width: 50%;
+        height: 300px;
+    }
+
+    #work {
+        border: 1px solid;
+        /* it creates border */
+        border-radius: 3px;
+        width: 100%;
+        /* border-style: dashed; */
+        border-color: rgb(20, 20, 20);
+        border-width: 2px;
+    }
+    #paragraph{
+        padding: 12px;
+        width:50%;
+        margin-right: 20px;
+}
+#fotter-links li {
+display: inline;    /*  they come in one line */
+}
+.copyright{
+    font-size: 0.55rem;
+}
+}
+
+/* Medium devices (laptops) */
+@media screen and (min-width: 769px) and (max-width:1500px) {
+    html {
+        font-size: 29px;
+    }
+    #logo_with_text {
+        display: block;
+    }
+    #nav_small {
+        display: none;
+    }
+
+    #jobs{
+        display:block;
+    }
+    #jobs-list{
+        display: none;
+    }
+
+    #photos {
+        height: 400px;
+    }
+
+    #paragraph {
+        padding: 12px;
+        width: 50%;
+        margin-right: 20px;
+    }
+
+        /* text-align: justify; ensures at end no spaces in lines of paragraphs */
+        #important {
+            display: flex;
+            max-width: 800px;
+            /* while moving screen,above 800px the content remain as it is.
+             it is not going to adjust according to screen.*/
+            margin: 0 auto;
+            /* if we want to see two div's side by side. put two div's inside another new div
+             and apply css flex property */
+            padding: 8px;
+            /* so that it doesn't touch edge of screen when shorter.*/
+        }
+    #Team_image {
+        Width: 50%;
+    }
+
+    #work {
+        border: 1px solid;
+        /* it creates border */
+        border-radius: 3px;
+        width: 100%;
+        /* border-style: dashed; */
+        border-color: rgb(20, 20, 20);
+        border-width: 2px;
+    }
+    #Jobs-table{
+        width: 100%;
+        border: 1px solid gray; /* outer border  only we get. not borders inside rows */
+        border-collapse: collapse;
+        /* borders of each individual cells vanish and we get single border line  */
+    }
+    #jobs{
+        max-width: 800px;
+        margin :0 auto;
+        padding: 0 16px;
+    }
+    #Job-header-row th{
+        border: 1px solid gray;
+        padding:4px 8px;
+        background-color:#BFDBFE;
+         color:#222222; /*  dark black color */
+         /* https://tailwindcolor.com/ Use this website and click on color to copy hex value of color. */
+    }
+    #Job-data-row td{
+        border: 1px solid gray;
+        padding:6px 10px;
+    }
+    
+    #Jobs-table tr:nth-child(odd) {
+     background-color: #eff6ff; 
+       /* n start from 0 and for every odd row in tr, ghostwhite color is going to apply */ 
+    }
+    #fotter-links li {
+        display: inline;    /*  they come in one line */
+        }
+        .copyright{
+            font-size: 0.55rem;
+        }
+}
+
+
+/* width 800px below varku css property apply avtundi as it is max width 
+@media screen and (max-width:800px) { 
+    body {
+      background-color: lightblue;
+    }
+  } */
+  /* git checkout -b branch name  (it make sure to create branch and switch to that branch if we are in main) */
