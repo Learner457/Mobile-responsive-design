@@ -237,7 +237,7 @@ display: inline;    /*  they come in one line */
 }
 
 /* Medium devices (laptops) */
-@media screen and (min-width: 769px) and (max-width:1500px) {
+@media screen and (min-width: 769px) and (max-width:3000px) {
     html {
         font-size: 29px;
     }
